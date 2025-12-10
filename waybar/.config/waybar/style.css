@@ -2,8 +2,8 @@
 @define-color text-white rgba(255, 255, 255, 1);
 
 * {
-  font-family: 'JetBrainsMono Nerd Font';
-  font-size: 14px;
+  font-family: 'JetBrainsMono';
+  font-size: 15px;
   transition: 0.5s ease-out;
 }
 
@@ -13,6 +13,6 @@ window#waybar {
 }
 
 #clock {
-  padding: 0px 10px;
+  padding: 0px 100px;
   color: @text-white;
 }
