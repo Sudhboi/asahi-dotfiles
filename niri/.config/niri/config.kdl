@@ -111,7 +111,7 @@ output "eDP-1" {
 layout {
     // Set gaps around windows in logical pixels.
     gaps 5
-
+    background-color "transparent"
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -268,6 +268,7 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
+spawn-sh-at-startup "hyprlax ~/Pictures/Wallpapers/Japanese/Great_Wave_off_Kanagawa2.jpg"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -306,7 +307,10 @@ animations {
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
-
+window-rule {
+    draw-border-with-background false
+    //open-maximized-to-edges true
+}
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
@@ -619,4 +623,17 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+}
+
+layer-rule {
+    match namespace="hyprlax"
+    place-within-backdrop true
+}
+
+overview {
+    workspace-shadow {
+        off
+    }
+    //zoom 0.33
+    backdrop-color "#000000"
 }

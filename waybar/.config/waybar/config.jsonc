@@ -1,0 +1,18 @@
+// -*- mode: jsonc -*-
+{
+	"layer": "top",
+	"position": "top",
+	"height": 38,
+
+  "modules-right": [
+    "clock"
+  ],
+
+  "clock": {
+      // "timezone": "America/New_York",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%d:%m:%y}",
+      "format": "{:%H:%M}",
+      "interval": 60
+  },
+}

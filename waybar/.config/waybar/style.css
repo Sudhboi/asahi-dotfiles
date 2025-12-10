@@ -1,0 +1,18 @@
+@define-color background-black rgba(0, 0, 0, 0.5);
+@define-color text-white rgba(255, 255, 255, 1);
+
+* {
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 14px;
+  transition: 0.5s ease-out;
+}
+
+window#waybar {
+  background-color: @background-black;
+  color: @text-white;
+}
+
+#clock {
+  padding: 0px 10px;
+  color: @text-white;
+}
