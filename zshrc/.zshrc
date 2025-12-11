@@ -130,4 +130,6 @@ functions y() {
     return $?
 }
 
+alias q="exit"
+
 eval "$(starship init zsh)"

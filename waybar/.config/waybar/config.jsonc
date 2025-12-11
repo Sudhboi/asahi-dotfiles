@@ -4,7 +4,14 @@
 	"position": "top",
 	"height": 38,
 
+  "modules-left": [
+    "custom/asahi_fedora",
+    "niri/window"
+  ],
+
   "modules-right": [
+    "custom/notification",
+    "battery",
     "clock"
   ],
 
@@ -15,4 +22,46 @@
       "format": "{:%H:%M}",
       "interval": 60
   },
+
+  "custom/asahi_fedora": {
+    "format": ""
+  },
+
+  "niri/window": {
+    "format": "{}",
+    "max-length": 50
+  },
+
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='16pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  "battery": {
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25,
+    "tooltip-format": "{capacity}% - {time} at {power}W"
+  }
 }

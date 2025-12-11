@@ -2,7 +2,7 @@
 @define-color text-white rgba(255, 255, 255, 1);
 
 * {
-  font-family: 'JetBrainsMono';
+  font-family: 'JetBrainsMono Nerd Font';
   font-size: 15px;
   transition: 0.5s ease-out;
 }
@@ -12,7 +12,21 @@ window#waybar {
   color: @text-white;
 }
 
+#window,
+#custom-asahi_fedora,
+#custom-notification,
+#battery,
 #clock {
-  padding: 0px 100px;
   color: @text-white;
+  padding: 0 10px;
+}
+
+#custom-asahi_fedora {
+  padding-left: 15px;
+  font-size: 21px;
+}
+
+#clock {
+  padding-right: 15px;
+  padding-left: 25px;
 }
