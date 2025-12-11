@@ -10,6 +10,7 @@
   ],
 
   "modules-right": [
+    "network",
     "custom/notification",
     "battery",
     "clock"
@@ -18,13 +19,21 @@
   "clock": {
       // "timezone": "America/New_York",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "format-alt": "{:%d:%m:%y}",
-      "format": "{:%H:%M}",
-      "interval": 60
+      "format-alt": "{:%H:%M %d-%m-%Y}",
+      "format": "{:%H:%M:%S}",
+      "interval": 1
   },
 
   "custom/asahi_fedora": {
-    "format": ""
+    "format": "",
+    "tooltip": false,
+    "menu": "on-click",
+    "menu-file": "~/.config/waybar/power_menu.xml",
+    "menu-actions": {
+        "shutdown": "shutdown",
+        "reboot": "reboot",
+        "suspend": "systemctl suspend",
+    },
   },
 
   "niri/window": {
@@ -61,7 +70,15 @@
     },
     "format": "{icon}",
     "format-icons": ["", "", "", "", ""],
-    "max-length": 25,
+    "format-charging": "",
+    "format-plugged": "",
     "tooltip-format": "{capacity}% - {time} at {power}W"
-  }
+  },
+
+  "network": {
+    "format-wifi": "",
+    "tooltip-format": "{essid}: {ipaddr}",
+    "format-disconnected": "⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}: {essid}",
+  },
 }

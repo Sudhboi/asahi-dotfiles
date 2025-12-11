@@ -15,6 +15,7 @@ window#waybar {
 #window,
 #custom-asahi_fedora,
 #custom-notification,
+#network,
 #battery,
 #clock {
   color: @text-white;

@@ -276,7 +276,7 @@ spawn-sh-at-startup "hyprlax ~/Pictures/Wallpapers/Japanese/Great_Wave_off_Kanag
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-    // skip-at-startup
+    skip-at-startup
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
